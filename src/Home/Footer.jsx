@@ -5,13 +5,16 @@ const Footer = () => {
         <div className='bg-[#252E42]'>
             <div className='md:max-w-5xl lg:max-w-6xl xl:max-w-screen-xl duration-500 mx-auto justify-center md:pt-20 md:pb-10 xl:px-10 lg:px-10 md:px-10 py-10'>
                 <h1 className='text-[#aaa] md:text-base text-sm justify-center pb-5 px-5 '>
-                    Website last updated: April 12, 2026
+                    Website last updated: April 15, 2026
                 </h1>
-                <span className="py-2 md:px-0 px-2">
-                    <a href="/">
-                        <img src='../whitelogo.png' className='md:w-52 w-52' alt='favicon.png'/>
-                    </a>
-                </span>
+                <div className='px-4 md:px-0 py-2'>
+                    <span>
+                        <a href="/">
+                            <img src='../whitelogo.png' className='md:w-52 w-52' alt='favicon.png'/>
+                        </a>
+                    </span>
+
+                </div>
                 <div className='md:grid md:grid-cols-5 md:gap-8 max-w-screen-2xl mx-auto justify-center py-5 text-white px-7'>
                     <div className=''>
                         <h1 className='text-white text-base justify-center font-semibold'>
