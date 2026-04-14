@@ -96,7 +96,7 @@ const FAQSection = () => {
 
         {/* Heading */}
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B6B]">
+          <h2 className="text-xl md:text-3xl font-bold text-[#1A2B6B]">
             Frequently Asked Questions
           </h2>
         </div>
@@ -106,7 +106,7 @@ const FAQSection = () => {
           {faqs.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-sm border border-transparent hover:border-[#2F6FD6] transition"
+              className="bg-white rounded-xl shadow-sm border border-transparent hover:border-[#2F6FD6] transition text-sm md:text-base"
             >
               {/* Question */}
               <button
