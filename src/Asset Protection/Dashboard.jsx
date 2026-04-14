@@ -12,7 +12,7 @@ const Hero = () => {
               <img
                 src="/Hero-Section-image.png" // 👉 replace with your image
                 alt="Client Experience"
-                className="relative sm:max-w-xs"
+                className="relative max-w-52 md:max-w-xs"
               />
 
             </div>
