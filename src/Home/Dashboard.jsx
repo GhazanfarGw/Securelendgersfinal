@@ -24,7 +24,7 @@ const Hero = () => {
           {/* Heading */}
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             <span className="text-[#2F6FD6]">Secure Crypto Liquidation</span>{" "}
-            <span className="text-[#1A2B6B]">&</span>
+            <span className="text-[#1A2B6B]"> & </span>
             <span className="text-[#1A2B6B]">
                 Institutional-Grade Asset Protection
             </span>
