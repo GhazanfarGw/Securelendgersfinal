@@ -69,7 +69,7 @@ function About() {
           
           <div className="relative">
             {/* Glass Card */}
-            <div className="relative bg-white/40 backdrop-blur-xl p-6 rounded-full shadow-xl">
+            <div className="relative">
               <img
                 src="/Circle.png"
                 alt="Secure Ledger Logo"
