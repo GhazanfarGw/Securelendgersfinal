@@ -68,10 +68,6 @@ function About() {
         <div className="flex justify-center hidden xl:block lg:block" data-aos="zoom-in">
           
           <div className="relative">
-            
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-blue-200 blur-3xl opacity-30 rounded-full"></div>
-
             {/* Glass Card */}
             <div className="relative bg-white/40 backdrop-blur-xl p-6 rounded-full shadow-xl">
               <img
