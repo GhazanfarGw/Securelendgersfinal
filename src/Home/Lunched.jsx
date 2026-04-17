@@ -36,7 +36,7 @@ function About() {
             <div className="absolute inset-0 bg-blue-200 blur-3xl opacity-30 rounded-full"></div>
 
             {/* Glass Card */}
-            <div className="relative bg-white/40 backdrop-blur-xl p-6 rounded-full shadow-xl">
+            <div className="relative">
               <img
                 src="/Circle.png"
                 alt="Secure Ledger Logo"
