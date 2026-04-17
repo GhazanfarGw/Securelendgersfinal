@@ -95,9 +95,6 @@ export default function ContactServicePage() {
     <Header/>
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-700 to-white flex items-center justify-center p-6">
       <div className="w-full max-w-2xl bg-white/90 backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-blue-100 mt-20">
-        <div className="text-center mb-8"> 
-        </div>
-
         <form ref={form} onSubmit={sendEmail} className="space-y-5">
           <div>
             <label className="text-sm text-gray-600">Service Category</label>
