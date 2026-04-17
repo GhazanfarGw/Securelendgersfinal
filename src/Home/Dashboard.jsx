@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="bg-[#EEF3FA] py-12 md:py-28 overflow-hidden duration-500">
-      <div className="md:max-w-screen-lg lg:max-w-screen-lg duration-500 mx-auto px-5 md:px-10 grid lg:grid-cols-2 gap-10 items-center">
+      <div className="xl:max-w-7xl lg:max-w-6xl duration-500 mx-auto px-5 md:px-10 grid lg:grid-cols-2 gap-10 items-center">
         <div data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="400" className='block md:hidden lg:hidden pt-5'>
           <video 
             class="" 
