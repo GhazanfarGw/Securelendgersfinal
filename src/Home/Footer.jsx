@@ -41,6 +41,7 @@ const Footer = () => {
                                 <li><Link to="/privacy-policy" className="text-sm text-[#C3CDD3] hover:text-base duration-500">Privacy Policy</Link></li>
                                 <li><Link to="/terms-conditions" className="text-sm text-[#C3CDD3] hover:text-base duration-500">Terms of Service</Link></li>
                                 <li><Link to="/faqs" className="text-sm text-[#C3CDD3] hover:text-base duration-500">FAQs</Link></li>
+                                <li><Link to="/blog" className="text-sm text-[#C3CDD3] hover:text-base duration-500">Blog</Link></li>
                                 <li><Link to="/careers" className="text-sm text-[#C3CDD3] hover:text-base duration-500">Careers</Link></li>
                             </ul>
                         </div>
