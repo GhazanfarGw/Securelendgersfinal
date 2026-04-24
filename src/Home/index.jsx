@@ -3,7 +3,6 @@ import Dashboard from './Dashboard'
 import Header from './header'
 import Footer from './Footer';
 import Price from './Price';
-import Subr from './Subr';
 import Exchange from './Exchanges'
 import Choose from './Choose';
 import Services from './OurServices'
@@ -12,6 +11,7 @@ import Ourclient from './Ourclients';
 import Institutional from './Institutional';
 import ComparisonSection from './ComparisonSection';
 import Lunched from './Lunched';
+import Discover from './Discover';
 
 function index() {
   return (
@@ -26,7 +26,7 @@ function index() {
         <Institutional/>
         <Choose/>
         <Services/>
-        <Subr/>
+        <Discover/>
         <Footer/>
         <Price/>
         
