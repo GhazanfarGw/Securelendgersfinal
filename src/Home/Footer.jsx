@@ -102,7 +102,7 @@ const Footer = () => {
                 <div className='mx-auto justify-center px-5 border-t py-5 border-[#136690]'>
                     <div className=''>
                         <p className='md:text-sm text-xs text-[#C3CDD3] text-center'>
-                            Secure Ledgers Solutions © 2026. All right reserved.
+                            Secure Ledger Solutions © 2026. All right reserved.
                         </p>
                     </div>
                 </div>
