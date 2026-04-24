@@ -14,7 +14,7 @@ const BlogPage = () => {
 
   return (
     <>
-      <div className="bg-gray-50 max-w-screen-2xl w-full md:px-10 px-5 pt-5 md:pt-8">
+      <div className="lg:max-w-6xl xl:max-w-7xl mx-auto justify-center w-full md:px-10 px-5 pt-5 md:pt-8">
 
         <SEO
           title={blog.title}
