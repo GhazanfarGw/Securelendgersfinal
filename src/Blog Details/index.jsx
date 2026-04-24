@@ -1,8 +1,8 @@
 import React from "react";
 
 import Dashboard from "./Blogsdisplay";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../Home/Footer";
+import Header from "../Home/header";
 
 
 function index() {
