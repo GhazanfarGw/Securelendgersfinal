@@ -111,10 +111,10 @@ function blog() {
     <>
     <div className='md:px-10 items-center mx-auto justify-center px-5 py-20 lg:max-w-6xl xl:max-w-7xl'>
       <div className='mx-auto justify-center'>
-        <h1 className='md:py-10 py-4 lg:text-4xl text-2xl font-displace'>
+        <h1 className='lg:text-4xl text-2xl font-displace underline'>
           Lastest Blogs
         </h1>
-        <div className='flex lg:flex-0 lg:grid lg:grid-cols-4 pb-5 overflow-x-scroll xl:overflow-hidden mx-auto gap-5 md:gap-5 justify-between items-center'>
+        <div className='flex lg:flex-0 lg:grid lg:grid-cols-4 pb-5 overflow-x-scroll xl:overflow-hidden mx-auto gap-5 md:gap-5 justify-between items-center mt-10'>
           <a href='/crypto-payment-integration-website-payment-gateway' className='justify-center hover:bg-[#f1f1f1] border-[#403f68] border-opacity-20 border rounded-xl shadow-xl'>
             <div className='px-3 py-4 items-center w-72 md:w-full lg:w-full'>
               <img className='w-96' src='../Screenshot_3.png' alt='images'/>
