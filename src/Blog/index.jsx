@@ -1,6 +1,6 @@
 import React from "react";
 
-import Dashboard from "./Blogsdisplay";
+import Dashboard from "./Dashboard";
 import Footer from "../Home/Footer";
 import Header from "../Home/header";
 
