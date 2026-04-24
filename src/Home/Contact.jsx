@@ -114,8 +114,18 @@ export default function ContactServicePage() {
     <>
       <Header />
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-700 to-white flex items-center justify-center p-6">
-        <div className="w-full max-w-2xl bg-white/90 backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-blue-100 mt-20">
+      <div className="min-h-screen flex items-center justify-center md:px-10 px-7 py-10">
+        <div className="w-full max-w-2xl mt-20">
+          <div className="text-center mb-10">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-3">
+              Secure Service Request
+            </h1>
+
+            <p className="text-gray-600 max-w-xl mx-auto md:text-base text-sm">
+              Submit your request for crypto security, transaction support, or asset recovery. 
+              Our specialists will review your case and get back to you with a tailored solution.
+            </p>
+          </div>
 
           <form ref={form} onSubmit={sendEmail} className="space-y-5">
 
@@ -126,7 +136,7 @@ export default function ContactServicePage() {
                 name="service"
                 onChange={handleServiceChange}
                 required
-                className="w-full mt-1 p-3 rounded-xl border focus:ring-2 focus:ring-blue-500"
+                className="md:text-base text-sm w-full mt-1 p-3 rounded-xl border focus:ring-2 focus:ring-blue-500"
               >
                 <option value="" disabled selected>Select Service</option>
                 {Object.keys(servicesData).map((s, i) => (
@@ -137,11 +147,11 @@ export default function ContactServicePage() {
 
             {/* Sub Service */}
             <div>
-              <label className="text-sm text-gray-600">Sub-Service</label>
+              <label className="text-gray-600 md:text-base text-sm">Sub-Service</label>
               <select
                 name="subservice"
                 required
-                className="w-full mt-1 p-3 rounded-xl border focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-1 p-3 rounded-xl border focus:ring-2 focus:ring-blue-500 md:text-base text-sm"
               >
                 <option value="" disabled selected>Select Sub-Service</option>
                 {subServices.map((s, i) => (
@@ -166,7 +176,7 @@ export default function ContactServicePage() {
               )}
 
               {extraFields.includes("walletType") && (
-                <select name="wallet_type" required className="p-3 border rounded-xl">
+                <select name="wallet_type" required className="p-3 border rounded-xl md:text-base text-sm">
                   <option value="">Wallet Type</option>
                   <option>Hot Wallet</option>
                   <option>Cold Wallet</option>
@@ -175,7 +185,7 @@ export default function ContactServicePage() {
               )}
 
               {extraFields.includes("riskLevel") && (
-                <select name="risk_level" required className="p-3 border rounded-xl">
+                <select name="risk_level" required className="p-3 border rounded-xl md:text-base text-sm">
                   <option value="">Risk Level</option>
                   <option>Low</option>
                   <option>Medium</option>
@@ -186,20 +196,20 @@ export default function ContactServicePage() {
             </div>
 
             {/* User Info */}
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 md:text-base text-sm">
               <input name="name" placeholder="Full Name" required className="p-3 border rounded-xl" />
               <input type="email" name="email" placeholder="Email" required className="p-3 border rounded-xl" />
             </div>
 
-            <input name="phone" placeholder="Phone / WhatsApp" required className="w-full p-3 border rounded-xl" />
+            <input name="phone" placeholder="Phone / WhatsApp" required className="w-full p-3 border rounded-xl md:text-base text-sm" />
 
-            <textarea name="message" placeholder="Describe your request" required className="w-full p-3 border rounded-xl h-28" />
+            <textarea name="message" placeholder="Describe your request" required className="w-full p-3 border rounded-xl h-28 md:text-base text-sm" />
 
             {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 rounded-xl font-semibold hover:scale-[1.02] transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="md:text-base text-sm w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 rounded-xl font-semibold hover:scale-[1.02] transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? "Sending..." : "Submit Secure Request"}
             </button>
