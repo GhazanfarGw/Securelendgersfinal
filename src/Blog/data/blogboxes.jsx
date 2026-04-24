@@ -9,7 +9,7 @@ const rawBlogs = [
     category: "Blockchain",
     description: "Learn how businesses integrate crypto payments into modern website gateways.",
     image: "../Screenshot_3.png", // manually added
-    date: "March 10, 2026",
+    date: "April 20, 2026",
     content: Blog01,
 
   },
