@@ -1,6 +1,7 @@
 import { slugify } from "../slugify";
 import Blog01 from "./Blog1";
 import Blog02 from "./Blog2";
+import Blog03 from "./Blog3";
 
 
 const rawBlogs = [
@@ -24,6 +25,17 @@ const rawBlogs = [
   image: "../liqucdity.jpg",
   date: "April 24, 2026",
   content: Blog02,
+},
+
+{
+  id: 3,
+  url: "liquidity-providers-custody-solutions",
+  title: "The Complete Guide to Cryptocurrency Asset Protection",
+  category: "Protection",
+  description: "Learn how Crypto liquidity providers, market makers & investors: protect digital assets with offshore trusts, custody solutions & institutional-grade security today.,",
+  image: "../asset protection.jpeg",
+  date: "April 29, 2026",
+  content: Blog03,
 }
 ]
 
