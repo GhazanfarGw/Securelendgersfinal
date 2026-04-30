@@ -2,6 +2,7 @@ import { slugify } from "../slugify";
 import Blog01 from "./Blog1";
 import Blog02 from "./Blog2";
 import Blog03 from "./Blog3";
+import Blog04 from "./Blog4";
 
 
 const rawBlogs = [
@@ -32,10 +33,21 @@ const rawBlogs = [
   url: "liquidity-providers-custody-solutions",
   title: "The Complete Guide to Cryptocurrency Asset Protection",
   category: "Protection",
-  description: "Learn how Crypto liquidity providers, market makers & investors: protect digital assets with offshore trusts, custody solutions & institutional-grade security today.,",
+  description: "Learn how Crypto liquidity providers, market makers & investors: protect digital assets with offshore trusts,",
   image: "../asset protection.jpeg",
   date: "April 29, 2026",
   content: Blog03,
+},
+
+{
+  id: 4,
+  url: "crypto-market-makers-liquidity-providers-usa-canada-2026",
+  title: "Top Crypto Market Makers & Liquidity Providers: The Complete 2026 Guide",
+  category: "Market Makers",
+  description: "Crypto markets in 2026 are no longer driven by hype alone. They are shaped by liquidity, execution quality,",
+  image: "../marketmakers.jpeg",
+  date: "April 30, 2026",
+  content: Blog04,
 }
 ]
 
