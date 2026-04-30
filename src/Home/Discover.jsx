@@ -156,6 +156,21 @@ function blog() {
             </div>
           </a>
 
+          <a href='/crypto-market-makers-liquidity-providers-usa-canada-2026' 
+          className='justify-center hover:bg-[#f1f1f1] border-[#403f68] border-opacity-20 border rounded-xl shadow-xl'>
+            <div className='px-3 py-4 items-center w-72 md:w-full lg:w-full'>
+              <img className='w-96' src='./marketmakers.jpeg' alt='images'/>
+              <div className='pt-5 px-5'>
+                <h1 className='font-semibold pb-5 lg:text-base text-sm'>
+                  Top Crypto Market Makers & Liquidity Providers: The Complete 2026 Guide
+                </h1>
+                <p className='lg:text-base text-sm pt-3 border-t border-[#403f68] border-opacity-20 hover:text-[#403f68]'>
+                  Learn More
+                </p>
+              </div>
+            </div>
+          </a>
+
         </div>
         <div className='lg:flex bg-[#186DC8] items-center justify-between lg:mt-28 mt-20 rounded-md'>
           <div className='max-w-screen-2xl lg:text-base text-sm lg:px-10 text-white px-5 py-10'>
