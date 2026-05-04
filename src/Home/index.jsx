@@ -21,8 +21,8 @@ function Index() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Secure Ledger Solutions",
-    "url": "http://localhost:3000/",
-    "logo": "http://localhost:3000/favicon_black.png",
+    "url": "https://secureledgerssolutions.com/",
+    "logo": "https://secureledgerssolutions.com/favicon_black.png",
     "sameAs": [
       "https://www.facebook.com/",
       "https://www.linkedin.com/"
@@ -34,7 +34,7 @@ function Index() {
       <SEO
         title="Secure Ledger Solutions | Crypto to Fiat Conversion"
         description="Securely convert cryptocurrency into fiat with institutional-grade liquidity, privacy, and security solutions."
-        url="http://localhost:3000/"
+        url="https://secureledgerssolutions.com/"
         schema={schema}
       />
 
