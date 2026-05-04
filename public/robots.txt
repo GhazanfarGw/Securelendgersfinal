@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://secureledgerssolutions.com/sitemap.xml
