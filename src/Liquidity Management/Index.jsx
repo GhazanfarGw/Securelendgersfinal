@@ -22,9 +22,9 @@ export default function Index() {
         content="Learn about liquidity management solutions for secure crypto transactions and institutional asset handling."
       />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://yourdomain.com/liquidity-management" />
+      <link rel="canonical" href="https://secureledgerssolutions.com/liquidity-management" />
     </Helmet>
-    
+
     <Header/>
     <Dashboard/>
     <ProblemAccordion/>
