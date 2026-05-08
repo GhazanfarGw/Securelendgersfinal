@@ -28,7 +28,7 @@ export default function Index() {
     <>
       <SEO
         title="Privacy Policy - Secure Ledger Solutions"
-        description="Read our Privacy Policy to understand how we protect your data at Secure Ledger Solutions."
+        description="Learn how Secure Ledger Solutions collects, protects, stores & processes personal information across our institutional crypto advisory services."
         url="https://secureledgerssolutions.com/privacy-policy"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
