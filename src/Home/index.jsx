@@ -48,8 +48,8 @@ function Index() {
   return (
     <>
       <SEO
-        title="Secure Ledger Solutions - Crypto to Fiat Conversion"
-        description="Secure Ledger Solutions allows you to seamlessly convert cryptocurrency into cash with a trusted and secure process."
+        title="Crypto Liquidation, Security Risk & Asset Protection - Secure Ledger Solutions"
+        description="Execute high-value crypto trades with deep liquidity, OTC desk routing, slippage-optimized execution, security risk management & digital asset protection."
         url="https://secureledgerssolutions.com/"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
