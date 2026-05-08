@@ -28,8 +28,8 @@ export default function Index() {
   return (
     <>
       <SEO
-        title="Careers - Secure Ledger Solutions"
-        description="Join our team at Secure Ledger Solutions and help shape the future of crypto security."
+        title="Careers at Secure Ledger Solutions - Crypto & Blockchain Team"
+        description="Career opportunities at Secure Ledger Solutions in crypto liquidity management, digital asset security, blockchain infrastructure & institutional advisory."
         url="https://secureledgerssolutions.com/careers"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
@@ -44,4 +44,3 @@ export default function Index() {
     </>
   )
 };
-
