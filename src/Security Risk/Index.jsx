@@ -16,7 +16,7 @@ export default function Index() {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Security Risk Management",
-  "description": "Protect digital assets with institutional-grade security and risk control, including threat detection, risk assessment, and mitigation strategies.",
+  "description": "Institutional crypto security risk management with cold storage, transaction risk intelligence, compliance frameworks, access control & cybersecurity.",
   "url": "https://secureledgerssolutions.com/security-risk",
   "provider": {
     "@type": "Organization",
@@ -36,8 +36,8 @@ export default function Index() {
   return (
     <>
     <SEO
-      title="Security Risk Management - Secure Ledger Solutions"
-      description="Protect Digital Assets with Institutional-Grade Security & Risk Control. Our comprehensive security risk management services safeguard your digital assets with advanced threat detection, risk assessment, and mitigation strategies."
+      title="Crypto Security Risk Management & Asset Protection - Secure Ledger Solutions"
+      description="Institutional crypto security risk management with cold storage, transaction risk intelligence, compliance frameworks, access control & cybersecurity."
       url="https://secureledgerssolutions.com/security-risk"
       image="https://secureledgerssolutions.com/og-image.jpg"
       schema={schema}
