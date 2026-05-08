@@ -17,7 +17,7 @@ export default function Index() {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Asset Protection",
-  "description": "Structured blockchain analysis, asset tracing, and recovery feasibility assessment for lost, inaccessible, or at-risk digital assets across wallets, exchanges, and on-chain environments.",
+  "description": "Institutional digital asset protection with blockchain tracing, forensic analysis, recovery feasibility & exchange coordination for high-value cases.",
   "url": "https://secureledgerssolutions.com/asset-protection",
   "provider": {
     "@type": "Organization",
@@ -37,8 +37,8 @@ export default function Index() {
   return (
     <>
       <SEO
-        title="Asset Protection - Secure Ledger Solutions"
-        description="Structured blockchain analysis, asset tracing, and recovery feasibility assessment for lost, inaccessible, or at-risk digital assets across wallets, exchanges, and on-chain environments."
+        title="Digital Asset Protection & Blockchain Asset Tracing - Secure Ledger Solutions"
+        description="Institutional digital asset protection with blockchain tracing, forensic analysis, recovery feasibility & exchange coordination for high-value cases."
         url="https://secureledgerssolutions.com/asset-protection"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
