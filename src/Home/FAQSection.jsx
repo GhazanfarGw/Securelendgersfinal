@@ -109,8 +109,8 @@ const FAQSection = () => {
   return (
     <>
       <SEO
-        title="FAQ - Secure Ledger Solutions"
-        description="Find answers to frequently asked questions about Secure Ledger Solutions' crypto security and execution services."
+        title="FAQs | Secure Ledger Solutions Crypto Services"
+        description="Answers to FAQs on crypto liquidity management, digital asset protection, OTC execution, security frameworks & institutional advisory services."
         url="https://secureledgerssolutions.com/faq"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
