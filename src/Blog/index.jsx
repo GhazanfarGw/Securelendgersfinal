@@ -11,7 +11,7 @@ function Index() {
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "Secure Ledger Solutions Blog",
+      "name": "Insights on crypto liquidity management, digital asset protection, blockchain security, OTC trading, compliance & institutional crypto strategies.",
       "url": "https://secureledgerssolutions.com/blog"
     },
     {
@@ -31,8 +31,8 @@ function Index() {
   return (
     <>
       <SEO
-        title="Blog - Secure Ledger Solutions"
-        description="Stay updated with the latest news and insights from Secure Ledger Solutions."
+        title="Crypto Insights & Digital Asset Security Blog - Secure Ledger Solutions"
+        description="Insights on crypto liquidity management, digital asset protection, blockchain security, OTC trading, compliance & institutional crypto strategies."
         url="https://secureledgerssolutions.com/blog"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
