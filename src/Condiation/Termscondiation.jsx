@@ -7,8 +7,8 @@ export default function TermsConditions() {
   const schema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Terms & Conditions - Secure Ledger Solutions",
-  "description": "Review the Terms & Conditions governing the use of Secure Ledger Solutions' services.",
+  "name": "Terms of Service - Secure Ledger Solutions",
+  "description": "Secure Ledger Solutions Terms of Service: platform usage, client responsibilities, service limitations, compliance & digital asset transaction terms.",
   "url": "https://secureledgerssolutions.com/terms-conditions",
   "publisher": {
     "@type": "Organization",
@@ -20,8 +20,8 @@ export default function TermsConditions() {
   return (
     <>
       <SEO
-        title="Terms & Conditions - Secure Ledger Solutions"
-        description="Review the Terms & Conditions governing the use of Secure Ledger Solutions' services."
+        title="Terms of Service - Secure Ledger Solutions"
+        description="Secure Ledger Solutions Terms of Service: platform usage, client responsibilities, service limitations, compliance & digital asset transaction terms."
         url="https://secureledgerssolutions.com/terms-conditions"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
@@ -33,7 +33,7 @@ export default function TermsConditions() {
 
           {/* Header */}
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Terms & Conditions
+            Terms of Service
           </h1>
           <p className="text-gray-500 mb-8">
             Secure Ledger Solutions
