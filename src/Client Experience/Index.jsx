@@ -19,7 +19,7 @@ export default function Index() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Client Experience",
-    "description": "Enhance client experience with tailored blockchain solutions, seamless integration, and high-touch service delivery.",
+    "description": "Institutional support for high-value crypto with private consultations, confidential execution, dedicated advisory & risk-controlled workflows.",
     "url": "https://secureledgerssolutions.com/client-experience",
     "serviceType": "Client Experience Optimization",
     "provider": {
@@ -43,8 +43,8 @@ export default function Index() {
   return (
     <>
       <SEO
-        title="Client Experience - Secure Ledger Solutions"
-        description="Enhance your client experience with our tailored approach to blockchain solutions, ensuring seamless integration and optimal performance."
+        title="Client Experience for High-Value Crypto Transactions - Secure Ledger Solutions"
+        description="Institutional support for high-value crypto with private consultations, confidential execution, dedicated advisory & risk-controlled workflows."
         url="https://secureledgerssolutions.com/client-experience"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
