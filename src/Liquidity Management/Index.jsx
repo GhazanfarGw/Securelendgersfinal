@@ -20,7 +20,7 @@ export default function Index() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Liquidity Management",
-    "description": "Liquidity management solutions for secure crypto transactions, institutional asset handling, and optimized capital flow.",
+    "description": "High-volume crypto transactions with institutional liquidity management, OTC block trading, smart order routing & fiat-to-crypto settlement infrastructure.",
     "url": "https://secureledgerssolutions.com/liquidity-management",
     "serviceType": "Crypto Liquidity Management",
     "provider": {
@@ -40,8 +40,8 @@ export default function Index() {
   return (
     <>
       <SEO
-        title="Liquidity Management | Secure Ledger Solutions"
-        description="Learn about liquidity management solutions for secure crypto transactions and institutional asset handling."
+        title="Crypto Liquidity Management & OTC Execution - Secure Ledger Solutions"
+        description="High-volume crypto transactions with institutional liquidity management, OTC block trading, smart order routing & fiat-to-crypto settlement infrastructure."
         url="https://secureledgerssolutions.com/liquidity-management"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
