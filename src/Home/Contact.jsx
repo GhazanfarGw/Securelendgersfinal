@@ -64,7 +64,7 @@ export default function ContactServicePage() {
     {
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "name": "Contact Secure Ledger Solutions",
+          "name": "Contact Secure Ledger Solutions - Private Crypto Advisory",
           "description": "Submit secure service requests for crypto security, transaction support, and asset recovery.",
           "url": "https://secureledgerssolutions.com/contact-us",
           "mainEntity": {
@@ -138,8 +138,8 @@ export default function ContactServicePage() {
   return (
     <>
       <SEO
-        title="Contact Secure Ledger Solutions"
-        description="Submit secure service requests for crypto security, transaction support, and asset recovery."
+        title="Contact Secure Ledger Solutions - Private Crypto Advisory"
+        description="Contact Secure Ledger Solutions for institutional crypto advisory, liquidity management, digital asset protection, OTC support & consultation services."
         url="https://secureledgerssolutions.com/contact-us"
         image="https://secureledgerssolutions.com/og-image.jpg"
         schema={schema}
