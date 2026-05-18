@@ -1,86 +1,325 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import {
+  ChevronDown,
+  Menu,
+  X,
+  ShieldCheck,
+  Wallet,
+  ArrowRight,
+  Scale,
+  Building2,
+  Network,
+  LockKeyhole,
+  Users,
+} from "lucide-react";
+
+const serviceGroups = [
+  {
+    category: "Risk & Security",
+    items: [
+      {
+        title: "Security Risk",
+        path: "/security-risk",
+        desc: "Operational risk and custody exposure analysis.",
+        icon: <ShieldCheck size={18} />,
+      },
+      {
+        title: "Asset Protection",
+        path: "/asset-protection",
+        desc: "Protection frameworks for institutional assets.",
+        icon: <LockKeyhole size={18} />,
+      },
+      {
+        title: "Security Governance",
+        path: "/security-governance",
+        desc: "Approval structures and governance systems.",
+        icon: <Scale size={18} />,
+      },
+    ],
+  },
+
+  {
+    category: "Operations",
+    items: [
+      {
+        title: "Liquidity Management",
+        path: "/liquidity-management",
+        desc: "Treasury optimization and capital movement.",
+        icon: <Wallet size={18} />,
+      },
+      {
+        title: "Transaction Systems",
+        path: "/transaction-systems",
+        desc: "Execution flow and authorization review.",
+        icon: <Network size={18} />,
+      },
+      {
+        title: "Custody Services",
+        path: "/custody-services",
+        desc: "Custody architecture and vendor assessment.",
+        icon: <Building2 size={18} />,
+      },
+    ],
+  },
+
+  {
+    category: "Advisory",
+    items: [
+      {
+        title: "Client Experience",
+        path: "/client-experience",
+        desc: "Operational usability and service evaluation.",
+        icon: <Users size={18} />,
+      },
+    ],
+  },
+];
+
+const navigation = [
+  { title: "Home", path: "/" },
+  { title: "Insights", path: "/blog" },
+];
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed z-50 w-full duration-500 border-b border-opacity-30 ${
-        isScrolled ? "bg-white shadow-sm" : "bg-white"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm"
+          : "bg-white"
       }`}
     >
-      <div className="mx-auto lg:max-w-6xl xl:max-w-7xl duration-500 px-4 md:px-10 flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex items-center py-3">
-          <img
-            src="./desktopblacklogo.png"
-            alt="Logo"
-            className="hidden md:block w-40 relative z-50"
-          />
-          <img
-            src="./desktopblacklogo.png"
-            alt="Logo"
-            className="block md:hidden w-36 relative z-50"
-          />
-        </Link>
-
-        {/* Desktop Menu */}
-        <nav className="hidden lg:flex xl:flex space-x-6 text-sm tracking-wide items-center">
-          <Link to="/liquidity-management" className="hover:text-[#1A2B6B] hover:font-semibold duration-500 hover:text-base hover:border-b-2 border-[#1A2B6B] font-bold">Liquidity Management</Link>
-          <Link to="/security-risk" className="hover:text-[#1A2B6B] hover:font-semibold duration-500 hover:text-base hover:border-b-2 border-[#1A2B6B] font-bold">Security Risk</Link>
-          <Link to="/asset-protection" className="hover:text-[#1A2B6B] hover:font-semibold duration-500 hover:text-base hover:border-b-2 border-[#1A2B6B] font-bold">Asset Protection</Link>
-          <Link to="/client-experience" className="hover:text-[#1A2B6B] hover:font-semibold duration-500 hover:text-base hover:border-b-2 border-[#1A2B6B] font-bold">Client Experience</Link>
-          <Link
-            to="/contact-us"
-            className="border border-[#0847F7] px-5 py-2 rounded-sm text-[#0847F7] hover:bg-[#0847F7] hover:text-white font-bold"
-          >
-            Book a Private Consultation
+      <div className="max-w-7xl mx-auto px-5 lg:px-8">
+        <div className="flex items-center justify-between h-[84px]">
+          {/* Logo */}
+          <Link to="/" className="relative z-50">
+            <img
+              src="./desktopblacklogo.png"
+              alt="Logo"
+              className="w-40 md:w-44 object-contain"
+            />
           </Link>
-        </nav>
 
-        {/* Mobile Menu Button */}
-        <div
-          className="xl:hidden lg:hidden text-3xl z-10 text-[#000]"
-          onClick={() => setOpen(!open)}
-        >
-          <ion-icon name={open ? "close" : "menu"}></ion-icon>
+          {/* Desktop Navigation */}
+          <nav className="hidden xl:flex items-center gap-8">
+            {navigation.slice(0, 2).map((item) => (
+              <NavLink
+                key={item.title}
+                to={item.path}
+                className={({ isActive }) =>
+                  `text-[15px] font-semibold transition-all duration-300 ${
+                    isActive
+                      ? "text-[#2563EB]"
+                      : "text-[#111827] hover:text-[#2563EB]"
+                  }`
+                }
+              >
+                {item.title}
+              </NavLink>
+            ))}
+
+            {/* Mega Menu */}
+            <div
+              className="relative"
+              onMouseEnter={() => setMegaMenuOpen(true)}
+              onMouseLeave={() => setMegaMenuOpen(false)}
+            >
+              <button className="flex items-center gap-1 text-[15px] font-semibold text-[#111827] hover:text-[#2563EB] transition-all duration-300">
+                Services
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-300 ${
+                    megaMenuOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {/* Mega Menu Dropdown */}
+              <div
+                className={`absolute left-1/1 -translate-x-1/2 top-14 w-[1280px] transition-all duration-300 ${
+                  megaMenuOpen
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible translate-y-4"
+                }`}
+              >
+                <div className="bg-white border border-[#E5E7EB] shadow-2xl rounded-[30px] overflow-hidden">
+                  <div className="grid grid-cols-3 gap-8 p-8">
+                    {serviceGroups.map((group, index) => (
+                      <div key={index}>
+                        <h3 className="text-sm font-bold uppercase tracking-[2px] text-[#2563EB] mb-5">
+                          {group.category}
+                        </h3>
+
+                        <div className="space-y-3">
+                          {group.items.map((service, idx) => (
+                            <Link
+                              key={idx}
+                              to={service.path}
+                              className="group flex gap-4 p-4 rounded-2xl hover:bg-[#F5F9FF] transition-all duration-300 border border-transparent hover:border-[#D6E4FF]"
+                            >
+                              <div className="min-w-[46px] h-[46px] rounded-xl bg-[#EEF4FF] flex items-center justify-center text-[#2563EB]">
+                                {service.icon}
+                              </div>
+
+                              <div>
+                                <h4 className="font-bold text-[#111827] group-hover:text-[#2563EB] transition">
+                                  {service.title}
+                                </h4>
+
+                                <p className="text-sm text-[#667085] mt-1 leading-relaxed">
+                                  {service.desc}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {navigation.slice(2).map((item) => (
+              <NavLink
+                key={item.title}
+                to={item.path}
+                className={({ isActive }) =>
+                  `text-[15px] font-semibold transition-all duration-300 ${
+                    isActive
+                      ? "text-[#2563EB]"
+                      : "text-[#111827] hover:text-[#2563EB]"
+                  }`
+                }
+              >
+                {item.title}
+              </NavLink>
+            ))}
+          </nav>
+
+          {/* CTA */}
+          <div className="hidden xl:flex items-center gap-4">
+            <Link
+              to="/contact-us"
+              className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-xl"
+            >
+              Book Consultation
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="xl:hidden relative z-50"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? (
+              <X size={30} className="text-[#111827]" />
+            ) : (
+              <Menu size={30} className="text-[#111827]" />
+            )}
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-white fixed w-full top-0 bottom-0 overflow-y-auto py-20 px-6 duration-500 ${
-          open ? "left-0" : "left-[-100%]"
-        }`}
+        className={`xl:hidden fixed top-0 ${
+          mobileOpen ? "left-0" : "-left-full"
+        } w-full h-screen bg-white transition-all duration-500 overflow-y-auto`}
       >
-        <ul className="text-sm">
-          <li className='tracking-wider hover:bg-[#1a1e24] px-8 py-2 flex flex-row items-center border-b hover:text-[#1A2B6B] hover:font-semibold duration-500 hover:text-base hover:border-b-2 border-[#1A2B6B] font-bold text-[#000] border-opacity-10 text-sm'><Link to="/liquidity-management" onClick={() => setOpen(false)}>Liquidity Management</Link></li>
-          <li className='tracking-wider hover:bg-[#1a1e24] px-8 py-2 flex flex-row items-center border-b hover:text-[#1A2B6B] hover:font-semibold duration-500 hover:text-base hover:border-b-2 border-[#1A2B6B] font-bold text-[#000] border-opacity-10 text-sm'><Link to="/security-risk" onClick={() => setOpen(false)}>Security Risk</Link></li>
-          <li className='tracking-wider hover:bg-[#1a1e24] px-8 py-2 flex flex-row items-center border-b hover:text-[#1A2B6B] hover:font-semibold duration-500 hover:text-base hover:border-b-2 border-[#1A2B6B] font-bold text-[#000] border-opacity-10 text-sm'><Link to="/asset-protection" onClick={() => setOpen(false)}>Asset Protection</Link></li>
-          <li className='tracking-wider hover:bg-[#1a1e24] px-8 py-2 flex flex-row items-center border-b hover:text-[#1A2B6B] hover:font-semibold duration-500 hover:text-base hover:border-b-2 border-[#1A2B6B] font-bold text-[#000] border-opacity-10 text-sm'><Link to="/client-experience" onClick={() => setOpen(false)}>Client Experience</Link></li>
-          <p className='text-sm px-8 text-[#4b4b4b] pt-8'>
-            Secure ledgers solutions offers to onvert your cryptocurrency into cash, having a trusted partner is essential to ensure a smooth, secure, and efficient process.
-          </p>
-          <li>
+        <div className="px-6 pt-28 pb-10">
+          {/* Nav Links */}
+          <div className="space-y-2">
+            {navigation.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                onClick={() => setMobileOpen(false)}
+                className="block py-4 border-b border-gray-100 text-[#111827] text-lg font-semibold hover:text-[#2563EB] transition"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+
+          {/* Services */}
+          <div className="mt-10">
+            <h3 className="text-xs uppercase tracking-[3px] text-[#2563EB] font-bold mb-5">
+              Services
+            </h3>
+
+            <div className="space-y-4">
+              {serviceGroups.map((group, index) => (
+                <div key={index}>
+                  <h4 className="text-sm font-bold text-[#111827] mb-3">
+                    {group.category}
+                  </h4>
+
+                  <div className="space-y-3">
+                    {group.items.map((service, idx) => (
+                      <Link
+                        key={idx}
+                        to={service.path}
+                        onClick={() => setMobileOpen(false)}
+                        className="flex items-start gap-4 p-4 rounded-2xl border border-[#EEF2F6] hover:bg-[#F7FAFF] transition-all duration-300"
+                      >
+                        <div className="min-w-[44px] h-[44px] rounded-xl bg-[#EEF4FF] flex items-center justify-center text-[#2563EB]">
+                          {service.icon}
+                        </div>
+
+                        <div>
+                          <h4 className="font-bold text-[#111827]">
+                            {service.title}
+                          </h4>
+
+                          <p className="text-sm text-[#667085] mt-1 leading-relaxed">
+                            {service.desc}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Box */}
+          <div className="mt-10 bg-[#F5F9FF] border border-[#D7E5FF] rounded-3xl p-6">
+            <h3 className="text-xl font-bold text-[#111827]">
+              Need Expert Guidance?
+            </h3>
+
+            <p className="text-[#667085] mt-3 leading-relaxed">
+              Speak with our team regarding digital asset custody, governance,
+              operational resilience, and institutional infrastructure.
+            </p>
+
             <Link
               to="/contact-us"
-              className="border border-[#0847F7] w-full block text-center py-2 rounded-sm text-[#0847F7] hover:bg-[#0847F7] hover:text-white mt-5"
-              onClick={() => setOpen(false)}
+              onClick={() => setMobileOpen(false)}
+              className="mt-5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-3 rounded-xl font-semibold inline-flex items-center gap-2 transition-all duration-300"
             >
-              Book a Private Consultation
+              Book Consultation
+              <ArrowRight size={18} />
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </header>
   );
@@ -236,4 +475,3 @@ export default Navbar;
 
 
 // export default Navbar;
-
