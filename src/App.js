@@ -14,6 +14,9 @@ import Blog from "./Blog/index";
 import BlogPage from "./Blog Details/index";
 import ScrollToTop from "./Home/ScrollToTop";
 import FAQSection from "./Home/FAQSection";
+import Custody from "./Custody Platform/Index";
+import Transaction from "./Transaction systems/Index";
+import Securitygovernance from "./Security Governance/Index";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,6 +54,9 @@ function App() {
           <Route path="/liquidity-management" element={ <Liquidity/> } />
           <Route path="/security-risk" element={ <Security/> } />
           <Route path="/asset-protection" element={ <Assets/> } />
+          <Route path="/custody-services" element={ <Custody/> } />
+          <Route path="/transaction-systems" element={ <Transaction/> } />
+          <Route path="/security-governance" element={ <Securitygovernance/> } />
           <Route path="/client-experience" element={ <Client/> } />
           <Route path="/privacy-policy" element={ <PrivacyPolicy/> } />
           <Route path="/terms-conditions" element={ <TermsConditions/> } />
@@ -65,5 +71,4 @@ function App() {
   )
 }
 
-export default App
-                  
+export default App                  
